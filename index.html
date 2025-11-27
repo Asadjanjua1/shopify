@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopify Success Blueprint | High-Converting Ebook</title>
+    <meta name="description" content="The ultimate, step-by-step guide for beginners in Pakistan to launch a profitable Shopify store in 2025.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* CSS embedded here for single-file delivery */
+        :root {
+            --color-primary: #0F1E44; /* Deep Royal Blue */
+            --color-secondary: #FFFFFF; /* White */
+            --color-accent-cta: #00A862; /* Shopify Green */
+            --color-accent-highlight: #F4C542; /* Gold/Warm Yellow */
+            --shadow-soft: 0 4px 15px rgba(15, 30, 68, 0.1);
+            --shadow-cta: 0 6px 20px rgba(0, 168, 98, 0.4);
+            --border-radius: 12px;
+            --spacing-section: 80px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--color-primary);
+            background-color: var(--color-secondary);
+            overflow-x: hidden;
+        }
+
+        /* --- UTILITIES & LAYOUT --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: var(--spacing-section) 0;
+            text-align: center;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--color-accent-cta);
+            color: var(--color-secondary);
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-cta);
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background-color: #009958; /* Slightly darker green */
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 168, 98, 0.5);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: var(--color-primary);
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--color-accent-highlight);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* --- HERO SECTION (1) --- */
+        .hero-section {
+            background-color: var(--color-secondary);
+            padding-top: 100px;
+            padding-bottom: 60px;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: var(--color-primary);
+        }
+
+        .hero-content h1 strong {
+            color: var(--color-accent-highlight);
+        }
+
+        .hero-content p {
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            font-weight: 400;
+            margin-bottom: 40px;
+            color: #4a5568;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .ebook-mockup {
+            width: 100%;
+            max-width: 380px;
+            height: auto;
+            margin: 40px auto;
+            box-shadow: var(--shadow-soft);
+            border-radius: var(--border-radius);
+            display: block;
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            padding: 10px 15px;
+            background-color: #f0f4f8;
+            border-radius: var(--border-radius);
+        }
+
+        .badge span {
+            color: var(--color-accent-cta);
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+
+        /* --- WHAT'S INSIDE (2) --- */
+        .inside-ebook {
+            background-color: var(--color-primary);
+            color: var(--color-secondary);
+        }
+
+        .inside-ebook h2 {
+            color: var(--color-secondary);
+        }
+
+        .inside-ebook .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .inside-ebook .item {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .inside-ebook .item span {
+            color: var(--color-accent-highlight);
+            font-size: 1.8rem;
+            line-height: 1;
+        }
+
+        .inside-ebook .item h3 {
+            font-weight: 600;
+            font-size: 1.15rem;
+            margin-bottom: 5px;
+            color: var(--color-accent-highlight);
+        }
+
+        .inside-ebook .item p {
+            font-size: 0.95rem;
+            color: #ccc;
+        }
+
+        /* --- WHY SHOPIFY (3) --- */
+        .why-shopify {
+            background-color: var(--color-secondary);
+            padding: calc(var(--spacing-section) / 2) 0;
+        }
+
+        .shopify-opportunity {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            background: linear-gradient(135deg, #f7f9fc 0%, #eef1f6 100%);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .shopify-opportunity h3 {
+            font-size: 1.8rem;
+            color: var(--color-primary);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .shopify-opportunity ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+            text-align: left;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px 30px;
+        }
+
+        .shopify-opportunity li {
+            font-size: 1.05rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            color: var(--color-primary);
+        }
+
+        .shopify-opportunity li span {
+            color: var(--color-accent-cta);
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* --- CHAPTER BREAKDOWN (4) --- */
+        .chapters-breakdown {
+            background-color: #f7f9fb;
+        }
+
+        .chapter-list {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            text-align: left;
+        }
+
+        .chapter-item {
+            background-color: var(--color-secondary);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+            border-left: 5px solid var(--color-accent-highlight);
+        }
+
+        .chapter-item h4 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: 10px;
+        }
+
+        .chapter-item p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        /* --- WHO IT'S FOR (5) --- */
+        .who-is-for {
+            background-color: var(--color-secondary);
+        }
+
+        .persona-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .persona-card {
+            background-color: #f0f4f8;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            width: 280px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .persona-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .persona-card span {
+            font-size: 3rem;
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .persona-card h4 {
+            font-size: 1.2rem;
+            color: var(--color-accent-highlight);
+            margin-bottom: 10px;
+        }
+
+        /* --- AUTHOR CREDIBILITY (6) --- */
+        .author-section {
+            background-color: var(--color-primary);
+            color: var(--color-secondary);
+            text-align: left;
+        }
+
+        .author-section h2 {
+            color: var(--color-secondary);
+        }
+
+        .author-content {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .author-photo {
+            width: 150px;
+            height: 150px;
+            background-color: #334267;
+            border-radius: 50%;
+            flex-shrink: 0;
+            border: 5px solid var(--color-accent-highlight);
+            overflow: hidden;
+            display: grid;
+            place-items: center;
+            font-size: 4rem;
+        }
+
+        .author-info h3 {
+            font-size: 1.8rem;
+            color: var(--color-accent-highlight);
+            margin-bottom: 10px;
+        }
+
+        .author-info p {
+            font-size: 1rem;
+            color: #ddd;
+        }
+
+        /* --- SOCIAL PROOF (7) --- */
+        .reviews-section {
+            background-color: var(--color-secondary);
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .review-card {
+            background-color: #f7f9fb;
+            padding: 25px;
+            border-radius: var(--border-radius);
+            text-align: left;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--color-accent-cta);
+        }
+
+        .stars {
+            color: var(--color-accent-highlight);
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .review-text {
+            font-style: italic;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            color: #333;
+        }
+
+        .reviewer-name {
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+
+        /* --- PRICING SECTION (8) --- */
+        .pricing-section {
+            background-color: #f7f9fb;
+        }
+
+        .pricing-card {
+            max-width: 450px;
+            margin: 0 auto;
+            background-color: var(--color-secondary);
+            padding: 50px 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .original-price {
+            font-size: 1.2rem;
+            color: #a0a0a0;
+            text-decoration: line-through;
+            font-weight: 400;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .discounted-price {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--color-accent-cta);
+            margin-bottom: 20px;
+            line-height: 1;
+        }
+
+        .discounted-price span {
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            font-weight: 600;
+        }
+
+        .bonus-list {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .bonus-list li {
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .bonus-list li span {
+            color: var(--color-accent-highlight);
+            margin-right: 15px;
+            font-size: 1.4rem;
+        }
+        
+        /* --- FAQ (9) --- */
+        .faq-section {
+            background-color: var(--color-secondary);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .faq-question {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            padding-top: 15px;
+            font-size: 0.95rem;
+            color: #555;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 150px; /* Adjust as needed */
+        }
+        
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--color-accent-cta);
+            transition: transform 0.3s;
+        }
+        
+        .faq-item.active .faq-question::after {
+            content: '-';
+            transform: rotate(0deg);
+        }
+
+        /* --- FINAL CTA (10) --- */
+        .final-cta {
+            background-color: var(--color-primary);
+            padding: 60px 0;
+            border-top: 8px solid var(--color-accent-highlight);
+        }
+
+        .final-cta h2 {
+            font-size: 2.5rem;
+            color: var(--color-secondary);
+            margin-bottom: 40px;
+        }
+
+        .final-cta h2::after {
+            background-color: var(--color-accent-cta);
+        }
+
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #0c1836;
+            color: #99a2b5;
+            padding: 30px 0;
+            font-size: 0.85rem;
+        }
+        
+        footer p {
+            margin: 0;
+        }
+
+        /* --- STICKY MOBILE CTA --- */
+        .sticky-whatsapp-cta {
+            display: none; /* Hidden by default */
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--color-accent-cta);
+            color: var(--color-secondary);
+            padding: 12px 0;
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 700;
+            z-index: 1000;
+            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+        }
+        
+        .sticky-whatsapp-cta span {
+            margin-left: 10px;
+        }
+
+
+        /* --- RESPONSIVENESS (Mobile-First) --- */
+        @media (max-width: 1024px) {
+            :root {
+                --spacing-section: 60px;
+            }
+            .chapter-list {
+                grid-template-columns: 1fr;
+            }
+            .author-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .author-photo {
+                margin-bottom: 20px;
+            }
+            .shopify-opportunity ul {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 2rem;
+            }
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 1.1rem;
+            }
+            .review-grid {
+                grid-template-columns: 1fr;
+            }
+            .trust-badges {
+                gap: 20px;
+            }
+            .badge {
+                font-size: 0.9rem;
+                padding: 8px 12px;
+            }
+            /* Show sticky CTA on mobile */
+            .sticky-whatsapp-cta {
+                display: block;
+            }
+            /* Add padding to the bottom of the body to account for sticky CTA */
+            body {
+                padding-bottom: 60px;
+            }
+            .inside-ebook .content-grid {
+                gap: 30px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+             .trust-badges {
+                 flex-direction: column;
+                 gap: 15px;
+                 align-items: center;
+             }
+             .badge {
+                 width: 80%;
+                 justify-content: center;
+             }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://wa.me/923456576446?text=I%20want%20Shopify%20Success%20Blueprint" class="sticky-whatsapp-cta" target="_blank">
+        BUY NOW VIA WHATSAPP <span style="font-size: 1.5rem;">&#x2705;</span>
+    </a>
+
+    <header class="section hero-section">
+        <div class="container hero-content">
+            <h1>Turn Your Idea into a Profitable Store: The <strong>Shopify Success Blueprint</strong></h1>
+            <p>The ultimate, step-by-step guide for beginners in Pakistan to launch, manage, and scale a cash-generating Shopify store in 2025.</p>
+            
+            <a href="https://wa.me/923456576446?text=I%20want%20Shopify%20Success%20Blueprint" class="cta-button" target="_blank">
+                Secure Your Copy Via WhatsApp Now!
+            </a>
+            
+            <img src="shopify-mockup2.png" alt="Shopify Success Blueprint Ebook Mockup" class="ebook-mockup">
+            
+            <div class="trust-badges">
+                <div class="badge"><span>&#x2705;</span> Beginner Friendly (No Experience Needed)</div>
+                <div class="badge"><span>&#x2705;</span> Step-by-Step Practical Blueprint</div>
+                <div class="badge"><span>&#x2705;</span> Strategies Verified for the Pakistan Market</div>
+            </div>
+            
+        </div>
+    </header>
+
+    <section class="section inside-ebook">
+        <div class="container">
+            <h2>Unlock Your E-commerce Potential</h2>
+            <div class="content-grid">
+                <div class="item">
+                    <span>&#128176;</span>
+                    <div>
+                        <h3>Niche & Product Selection Mastery</h3>
+                        <p>Discover high-demand, low-competition products that are proven to sell in the Pakistani market.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <span>&#128187;</span>
+                    <div>
+                        <h3>Shopify Store Setup (A-Z)</h3>
+                        <p>Learn the exact settings, apps, and design tweaks to build a professional, trust-building store in less than 48 hours.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <span>&#128200;</span>
+                    <div>
+                        <h3>Low-Cost Traffic Generation</h3>
+                        <p>Master the foundational marketing strategies to drive initial sales without spending a fortune on complex ads.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <span>&#128640;</span>
+                    <div>
+                        <h3>Scaling & Automation Secrets</h3>
+                        <p>The roadmap to moving past your first sale, scaling your profits, and automating your operations for passive income.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section why-shopify">
+        <div class="container">
+            <h2>Why This is Your Moment</h2>
+            <div class="shopify-opportunity">
+                <h3>The Pakistan Ecommerce Opportunity is Exploding</h3>
+                <p class="text-left" style="font-weight: 500;">Don’t miss your chance to build a profitable Shopify store in 2025. Ecommerce adoption is accelerating, creating massive potential for early movers.</p>
+                <ul>
+                    <li><span>&#x2705;</span> Low Barrier to Entry: Start with minimal capital and zero coding skills.</li>
+                    <li><span>&#x2705;</span> Global Reach: While selling locally, you build a brand that can eventually expand.</li>
+                    <li><span>&#x2705;</span> Flexible: Run your entire business from a laptop, anywhere in Pakistan.</li>
+                    <li><span>&#x2705;</span> Scalable: Shopify's platform is built to handle millions in sales.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section chapters-breakdown">
+        <div class="container">
+            <h2>Blueprint: A Chapter-by-Chapter Roadmap</h2>
+            <div class="chapter-list">
+                <div class="chapter-item">
+                    <h4>1. Mindset & Importance</h4>
+                    <p>The essential e-commerce thinking, goal setting, and the low-investment strategy for beginners.</p>
+                </div>
+                <div class="chapter-item">
+                    <h4>2. Product Hunting System</h4>
+                    <p>Detailed steps to identify profitable niches and use supplier networks specific to the local market.</p>
+                </div>
+                <div class="chapter-item">
+                    <h4>3. The Perfect Shopify Store</h4>
+                    <p>Theme selection, product photography tips, payment gateway setup (EasyPaisa/JazzCash), and crucial apps.</p>
+                </div>
+                <div class="chapter-item">
+                    <h4>4. Marketing Without Spending Thousands</h4>
+                    <p>Mastering organic traffic, using social media, and crafting high-converting product descriptions.</p>
+                </div>
+                <div class="chapter-item">
+                    <h4>5. Scalling Your Bsienss</h4>
+                    <p>The secrets to making a customer buy from you repeatedly, boosting your lifetime value (LTV).</p>
+                </div>
+                <div class="chapter-item">
+                    <h4>6. Handling Operations Like a Pro</h4>
+                    <p>Managing inventory, streamlined shipping logistics within Pakistan, and professional customer service scripts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section who-is-for">
+        <div class="container">
+            <h2>Is This Blueprint For You?</h2>
+            <p style="font-size: 1.1rem; max-width: 700px; margin: 0 auto 40px;">If you fit into any of these categories, this blueprint is the launchpad you need:</p>
+            <div class="persona-grid">
+                <div class="persona-card">
+                    <span>&#127891;</span>
+                    <h4>Students / Side-Hustlers</h4>
+                    <p>Looking for a flexible way to earn money without compromising studies or their main job.</p>
+                </div>
+                <div class="persona-card">
+                    <span>&#127919;</span>
+                    <h4>Complete Beginners</h4>
+                    <p>Ready to start their online business journey but don't know the first, second, or third step.</p>
+                </div>
+                <div class="persona-card">
+                    <span>&#128188;</span>
+                    <h4>Aspiring Entrepreneurs</h4>
+                    <p>Tired of 9-to-5 life and seeking a proven business model that offers financial freedom.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section author-section">
+        <div class="container">
+            <h2>Why Trust This Blueprint?</h2>
+
+                <div class="author-info">
+                    <h3>Authored by a Seasoned Pakistani E-commerce Strategist</h3>
+                    <p>This book isn't based on theory. It's built on <strong>5+ years of practical experience</strong> launching and scaling multiple successful Shopify stores *specifically within the Pakistan market.</p>
+                    <p>We've condensed all the failures, insights on logistics, payment processing, and winning marketing strategies into one streamlined guide so you can skip the guesswork and go straight to profits. You're learning verified, profitable methods.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section reviews-section">
+        <div class="container">
+            <h2>Success Stories from Our Community</h2>
+            <div class="review-grid">
+                <div class="review-card">
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="review-text">"I was overwhelmed, but this blueprint made setting up my store so clear. I made my first sale within 10 days! The local logistics advice was priceless."</p>
+                    <div class="reviewer-name">- Arslan K., Lahore</div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="review-text">"Best investment of my year. The product hunting section alone gave me three winning ideas. Highly recommend for any Pakistani beginner."</p>
+                    <div class="reviewer-name">- Fatima R., Karachi</div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="review-text">"The low-cost marketing strategies actually work. I've stopped wasting money on confusing ads and focused on organic growth thanks to this."</p>
+                    <div class="reviewer-name">- Zain S., Islamabad</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section pricing-section">
+        <div class="container">
+            <h2>Get Started Today & Claim Your Bonuses</h2>
+            <div class="pricing-card">
+                <p class="original-price">Original Price: PKR 899</p>
+                <div class="discounted-price">
+                    PKR 299 <span>(Limited Time Discount)</span>
+                </div>
+                
+                <a href="https://wa.me/923456576446?text=I%20want%20Shopify%20Success%20Blueprint" class="cta-button" target="_blank">
+                    Buy Now for Only PKR 299
+                </a>
+                
+                <ul class="bonus-list">
+                    <li><span>&#127873;</span> BONUS 1: 20+ High-Demand Products for Pakistan 2025 List.</li>
+                    <li><span>&#127873;</span> BONUS 2: The Ultimate Shopify App Checklist (Free & Paid Must-Haves).</li>
+                    <li><span>&#127873;</span> BONUS 3: Lifetime access to all future ebook updates.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">Do I need any prior experience to start?</div>
+                    <div class="faq-answer">Absolutely not. This 'Blueprint' is designed from the ground up for complete beginners. We start with the fundamentals and guide you every step of the way.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Is Shopify available and effective in Pakistan?</div>
+                    <div class="faq-answer">Yes, Shopify works perfectly in Pakistan. The key is understanding local logistics and payment gateways (COD, EasyPaisa, etc.), which this blueprint covers in detail.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How will I receive the ebook after purchase?</div>
+                    <div class="faq-answer">Once your purchase is confirmed via WhatsApp, you will immediately receive a download link to the PDF file via WhatsApp/Email. You can read it on any device (phone, tablet, PC).</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Do I need a large investment to start my store?</div>
+                    <div class="faq-answer">No. We focus on low-investment and high-return strategies, including sourcing, marketing, and the essential free trials Shopify offers. Start smart, not big.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="final-cta">
+        <div class="container">
+            <h2>Stop Wishing. Start Earning.</h2>
+            <p style="color: #ddd; font-size: 1.2rem; margin-bottom: 50px; max-width: 800px; margin-left: auto; margin-right: auto;">The future of e-commerce in Pakistan is now. Get the only guide you'll ever need to join the ranks of successful store owners.</p>
+            <a href="https://wa.me/923456576446?text=I%20want%20Shopify%20Success%20Blueprint" class="cta-button" target="_blank">
+                I Want the Shopify Success Blueprint!
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2025 Shopify Success Blueprint. All Rights Reserved. | Disclaimer: Results are not guaranteed and vary based on individual effort.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Simple script for FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.closest('.faq-item');
+                faqItem.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
